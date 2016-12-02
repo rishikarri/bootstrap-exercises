@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>simple blocks</title>
+
+	<style type="text/css" media="screen">
+
+		div{
+			background-color: #444;
+			margin: 2px;
+			color: white;
+			font-size: 72px;
+		}
+
+		#block1{
+			width: 60%;
+			height: 200px;
+			float: left;
+		}
+
+		#block2{
+			width: 35%;
+			height: 600px;
+			float: right;
+		}
+
+		#block3{
+			width: 60%;
+			height: 400px;
+			float: left;
+		}
+
+
+		@media screen and (max-width: 900px) {
+			/* this rule will only kick in if the screen is over 900px. the screen won't run if the max width goes over 900px */
+
+			/* known as a breakpoint */
+
+			/* below css will only apply if the max width is 900px - for example a phone is 500px so if you are using a phoen, teh below css will kick in */
+			div{
+				width: 90% !important;
+				float: none !important;
+				margin: auto !important;
+				background-color: green !important;
+			}
+		}
+
+		@media screen and (max-width: 500px){
+			#block2{
+				display: none;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div id="block1">Block1</div>
+	<div id="block2">Block2</div>
+	<div id="block3">Block3</div>
+
+</body>
+</html>
